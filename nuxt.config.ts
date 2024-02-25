@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     "@nuxtjs/tailwindcss",
     'shadcn-nuxt',
-    "nuxt-icon"
+    "nuxt-icon",
   ],
   shadcn: {
     /**
@@ -17,5 +17,5 @@ export default defineNuxtConfig({
      * @default "./components/ui"
      */
     componentDir: './components/ui'
-  } 
+  },
 })
