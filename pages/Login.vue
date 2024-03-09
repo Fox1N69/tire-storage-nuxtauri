@@ -6,7 +6,6 @@ useHead({
 const emailRef = ref('')
 const passwordRef = ref('')
 const nameRef = ref('')
-
 </script>
 
 <template>
