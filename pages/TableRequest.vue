@@ -6,20 +6,5 @@ const data = await response.json();
 <template>
     <h1 class="text-center">Hello Table Request page</h1>
     <div class="">
-
     </div>
-
-    <table>
-        <th>
-            ID:
-
-            <tbody>
-                {{ data
-                    .filter((item) => item.id === 1)
-                    .map((filteredItem) => filteredItem.id)
-                }}
-            </tbody>
-        </th>
-    </table>
-
 </template>

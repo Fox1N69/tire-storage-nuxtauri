@@ -25,7 +25,8 @@
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.4.19",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vue3-easy-data-table": "^1.5.47"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.11.4",
