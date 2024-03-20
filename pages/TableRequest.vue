@@ -16,8 +16,15 @@ export default {
     methods: {
         async submitData() {
             try {
-                const response = await this.$axios.post('http://127.0.0.1:4000/test', { message: this.message });
-                console.log('Ответ от сервера:', response.data);
+                const response = await fetch('http://127.0.0.1:4000/test', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: this.message })
+                });
+                const data = await response.json();
+                console.log('Ответ от сервера:', data);
                 // Добавьте обработку ответа от сервера здесь
             } catch (error) {
                 console.error('Ошибка при отправке данных:', error);
@@ -25,5 +32,6 @@ export default {
             }
         }
     }
-};
+}
+
 </script>

@@ -10,12 +10,7 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
     "nuxt-icon",
     "@pinia/nuxt",
-    "@nuxtjs/axios",
   ],
-  axios: {
-    // extra config e.g
-    BaseURL: 'https://127.0.0.1:4000'
-  },
   shadcn: {
     /**
      * Prefix for all the imported component
