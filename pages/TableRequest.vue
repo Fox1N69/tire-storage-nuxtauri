@@ -1,30 +1,43 @@
 <template>
-    <form @submit.prevent="submitData">
-        <input type="text" v-model="message" placeholder="Введите сообщение">
-        <button type="submit">Отправить</button>
-    </form>
+    <div>
+        <form @submit.prevent="submitForm">
+            <input type="text" v-model="message" placeholder="Enter your message">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <div>
+        
+    </div>
 </template>
 
 <script>
-import axios from "axios";
 export default {
     data() {
         return {
-            message: ""
+            message: ''
         };
     },
-
     methods: {
-        async submitData() {
+        async submitForm() {
+            const data = {
+                message: this.message
+            };
+
             try {
-                const response = await this.$axios.post('http://127.0.0.1:4000/test', { message: this.message });
-                console.log('Ответ от сервера:', response.data);
-                // Добавьте обработку ответа от сервера здесь
+                const response = await fetch('http://localhost:4000/test', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                const responseData = await response.json();
+                console.log('Response:', responseData);
             } catch (error) {
-                console.error('Ошибка при отправке данных:', error);
-                // Обработка ошибки
+                console.error('Error:', error);
             }
         }
     }
-}
+};
 </script>

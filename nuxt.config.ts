@@ -1,15 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   typescript: {
-    strict: true
+    strict: true,
   },
   devtools: { enabled: true },
+  extends: ["@nuxt/ui-pro"],
   modules: [
     "@nuxt/image",
     "@nuxtjs/tailwindcss",
     "shadcn-nuxt",
     "nuxt-icon",
     "@pinia/nuxt",
+    "@nuxtjs/color-mode",
   ],
   shadcn: {
     /**
@@ -22,5 +24,4 @@ export default defineNuxtConfig({
      */
     componentDir: "./components/ui",
   },
-  
 });
