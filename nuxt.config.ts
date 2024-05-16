@@ -1,3 +1,5 @@
+import editableConfig from "./editable.config";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   typescript: {
@@ -12,6 +14,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@pinia/nuxt",
     "@nuxtjs/color-mode",
+    ['nuxt-editable', editableConfig],
   ],
   shadcn: {
     /**
